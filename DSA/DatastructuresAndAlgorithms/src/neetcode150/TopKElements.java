@@ -1,0 +1,31 @@
+package neetcode150;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+
+public class TopKElements {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] nums = {1,1,1,2,2,3};
+		int k =2;
+		HashMap<Integer,Integer> hash = new HashMap<>();
+		for(int i=0;i<nums.length;i++) {
+			hash.put(nums[i], hash.getOrDefault(nums[i],0 )+1);
+		}
+		
+		List<Integer> ans = new ArrayList<>(hash.values());
+		Collections.sort(ans,Collections.reverseOrder());
+		
+		int[] result = new int[k];
+		for(int i=0;i<k;i++) {
+			result[i] = hash.get(ans.get(i));
+		}
+		
+		System.out.println(Arrays.toString(result));
+	}
+
+}
