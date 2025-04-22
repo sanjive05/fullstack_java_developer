@@ -1,0 +1,15 @@
+package guessgame;
+
+public class TestGame {
+
+	public static void main(String[] args) {
+		Player p1 = new Player("Manoj");
+		p1.makeGuess();
+		
+		Player p2 = new Player("Pradeep");
+		p1.name = "Pradeep";
+		p1.makeGuess();
+
+	}
+
+}
