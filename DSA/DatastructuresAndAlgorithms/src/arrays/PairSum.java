@@ -1,0 +1,28 @@
+package arrays;
+
+public class PairSum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[]  arr = {1,2,4,5,6,7,9,11};
+		
+		int target = 9;
+		
+		int start = 0, end = arr.length-1;
+		
+		while(start<end) {
+			if(arr[start]+arr[end] == target) {
+				System.out.println(arr[start]+"   "+arr[end]);
+				break;
+			}
+			else if((arr[start]+arr[end]) >target) {
+				end--;
+			}
+			else {
+				start++;
+			}
+		}
+
+	}
+
+}

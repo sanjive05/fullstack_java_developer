@@ -1,0 +1,28 @@
+package arrays;
+
+public class FindTheLargestInTheArrayAndCount {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] arr = {3,4,5,4,3,4,7,2,7};
+		
+		int count = 0;
+		
+		int largest = Integer.MIN_VALUE;
+		
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]>largest) {
+				largest=arr[i];
+				count = 1;
+			}
+			else if(arr[i]==largest){
+				count++;
+			}
+		}
+		
+		System.out.println("Largest : "+largest +"    count :  "+count);
+
+	}
+
+}
