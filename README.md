@@ -1,4 +1,6 @@
-06/04/2025   -   git project setup completed.
-19/04/2025  -   Global exception Handler completed
+Complete ecom app 
+Spring boot 
+DSA 
+Java 8 
 Jpa started 
 

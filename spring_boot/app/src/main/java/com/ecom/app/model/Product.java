@@ -8,10 +8,12 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long productId;
     private String productName;
+    private String image;
     private String description;
     private Integer quantity;
     private double price;
     private double specialPrice;
+    private double discount;
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
@@ -27,7 +29,22 @@ public class Product {
         this.category = category;
     }
 
+    public double getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(double discount) {
+        this.discount = discount;
+    }
+
     public Product() {
+    }
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public Long getProductId() {
