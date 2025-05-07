@@ -18,8 +18,7 @@ public class FunctionInterfaceTest {
 	  Interface1 obj = (a,b)-> System.out.println(" data's are "+a +" and "+b);;
 	  
 	  
-	  obj.add(323, 2323);
-	  obj.add(34,23);
+	 
 
 	}
 
