@@ -13,6 +13,8 @@ public class EmployeeStreamQuestion {
 		list.stream().filter(e->e.getAge()>25).forEach(e->System.out.println(e.getAge()));
 		
 		list.stream().map(e -> e.getName().toUpperCase()).forEach(e->System.out.println(e));
+		
+		
 
 	}
 
