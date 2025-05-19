@@ -26,7 +26,6 @@ import java.util.HashMap;
 
 public class PrefixSum{
     public static void print(int start,int end,int[] arr){
-      //  System.out.println("Start  : "+start+"   End  :"+end);
         for(int i=start;i<=end;i++){
             System.out.print(arr[i]+" ");
         }
