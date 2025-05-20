@@ -11,6 +11,7 @@ public class Question1 {
 				,new Employee("Chandru",26,"ISG")
 				);
 		
+		
 		employeeData.stream().map(x-> x.getName().toUpperCase()).forEach(x->System.out.println(x));
 		
 
