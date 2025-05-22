@@ -13,4 +13,5 @@
     <fullyQualifiedTypeName name="oopsinterviewquestions.A"/>
     <fullyQualifiedTypeName name="java.lang.Runnable"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="multithreading.SingletonClassMultithreading"/>
 </qualifiedTypeNameHistroy>
