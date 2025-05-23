@@ -9,6 +9,7 @@ public class SingletonClassMultithreading {
 	
 	public static SingletonClassMultithreading getObject() {
 		if(singleTonClassMultithreading == null) {
+			
 		      singleTonClassMultithreading = new SingletonClassMultithreading();
 		}
 		return singleTonClassMultithreading;
