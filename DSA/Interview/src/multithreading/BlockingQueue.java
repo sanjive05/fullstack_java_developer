@@ -15,7 +15,11 @@ public class BlockingQueue {
 	
 	public boolean add(int item) {
 		synchronized(q) {
+			if(q.size()==capacity) {
+				return false;
+			}
 			capacity++;
+			q.notifyAll();
 			return q.add(item);
 			
 		}
@@ -23,6 +27,14 @@ public class BlockingQueue {
 	
 	public int remove() {
        synchronized(q) {
+    	   if(q.size()==0) {
+    		   try {
+				q.wait();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    	   }
     	   capacity--;
 			return q.poll();
 		}
