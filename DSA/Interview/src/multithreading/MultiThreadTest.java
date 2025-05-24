@@ -44,6 +44,7 @@ public class MultiThreadTest {
 		thread2.start();
 		
 		
+		
 		System.out.println("Main is ending...");
 		
 	}
