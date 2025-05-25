@@ -14,6 +14,7 @@ public class QueueTest {
 					
 					System.out.println("Data added into the list :  "+queue.add(count++));
 					
+					
 				}
 			});
 			Thread thread2 = new Thread(()->{
@@ -27,6 +28,7 @@ public class QueueTest {
 			
 			thread1.start();
 			thread2.start();
+			System.out.println(thread1.getState());
 			  System.out.println("Main method is ending...");
 	}
 }

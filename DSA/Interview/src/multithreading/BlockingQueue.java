@@ -15,12 +15,17 @@ public class BlockingQueue {
 	
 	public boolean add(int item) {
 		synchronized(q) {
-			if(q.size()==capacity) {
-				return false;
+			while(q.size()==capacity) {
+				try {
+					wait();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
-			capacity++;
+			 boolean flag = q.add(item);
 			q.notifyAll();
-			return q.add(item);
+			return flag;
 			
 		}
 	}
@@ -35,8 +40,9 @@ public class BlockingQueue {
 				e.printStackTrace();
 			}
     	   }
-    	   capacity--;
-			return q.poll();
+    	  int n =  q.poll();
+    	   q.notifyAll();
+			return n;
 		}
 		
 	}
