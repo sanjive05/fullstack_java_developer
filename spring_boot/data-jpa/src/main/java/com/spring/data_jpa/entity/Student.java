@@ -6,12 +6,15 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Arrays;
+import java.util.List;
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Builder
 @Table(name = "tbl_student")
+@Builder
 public class Student {
     @Id
     @SequenceGenerator(
@@ -26,8 +29,41 @@ public class Student {
     private Long studentId;
     private String firstName;
     private String lastName;
+    @Column(
+            name = "email_address",
+            nullable =false
+    )
     private String emailId;
-    private String guardianName;
-    private String guardianEmail;
-    private String guardianMobile;
+
+    @Embedded
+    private Guardian guardian;
+
+
+    public Long getStudentId() {
+        return studentId;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmailId() {
+        return emailId;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentId=" + studentId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", emailId='" + emailId + '\'' +
+
+                '}';
+    }
 }

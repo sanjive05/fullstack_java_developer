@@ -11,6 +11,5 @@ public class DataJpaApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = SpringApplication.run(DataJpaApplication.class, args);
-
 	}
 }
