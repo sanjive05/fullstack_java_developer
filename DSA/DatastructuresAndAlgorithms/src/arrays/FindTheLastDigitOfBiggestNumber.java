@@ -3,10 +3,18 @@ package arrays;
 public class FindTheLastDigitOfBiggestNumber {
 
 	public static void main(String[] args) {
-		String input = "3434";
-		int a = input.charAt(input.length()-1)-'0';
-		System.out.println(a);
-
+		
+		// Reverse a number 
+		int n = 343432;
+		
+		int temp = n;
+		int reverse = 0;
+		while(temp>0) {
+			reverse += (temp%10);
+			reverse *=10;
+			temp /=10;
+		}
+		System.out.println(reverse);
 	}
 
 }

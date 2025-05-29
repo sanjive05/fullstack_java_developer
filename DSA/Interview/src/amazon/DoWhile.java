@@ -9,8 +9,9 @@ public class DoWhile {
 	}
 	static void print() {
 		double iguana = 0;
+		int snake = 1;
 		do {
-			int snake = 1;
+			
 			
 			System.out.println(snake++ +"  ");
 		} while(snake<=5);
