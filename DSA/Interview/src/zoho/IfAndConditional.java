@@ -59,6 +59,10 @@ public class IfAndConditional {
 			
 		}while(a++<10);
 		System.out.println(sum+"   "+a );
+		
+		 a = 10;
+		  	
+		 System.out.println(a);
 	}
 	/* 0  0
 	 * 1  5
