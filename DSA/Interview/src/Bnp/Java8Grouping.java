@@ -1,11 +1,13 @@
 package Bnp;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -17,6 +19,16 @@ public class Java8Grouping {
 				new Employee("Surendar",26,"Testing"),
 				new Employee("Pradeep",22,"Finance")
 				);
+		//Collections.sort(list);
+		
+		Map<Object, Long> departmentMap =list.stream().collect(Collectors.groupingBy(
+		        Employee::getDeparment,
+				Collectors.counting()));
+		System.out.println(departmentMap);
+	
+		list.forEach(e -> System.out.println(e.getName()));
+		
+		System.out.println("****************************************************************");
 		Map<Integer, List<Employee>> map= list.stream().collect(Collectors.groupingBy(emp -> emp.getAge()));
 		
 		String a = "ABCABCAAC";

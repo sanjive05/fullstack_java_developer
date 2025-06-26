@@ -1,7 +1,9 @@
 package Bnp;
 
-public class Employee {
-	
+import java.util.Comparator;
+
+public class Employee <T> implements Comparator<T>{
+
 	private String name;
 	
 	private int age;
@@ -69,7 +71,16 @@ public class Employee {
 			return false;
 		return true;
 	}
+
+	@Override
+	public int compare(T o1, T o2) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	}
+
+	
 	
 	
 
-}

@@ -1,10 +1,12 @@
 package Bnp;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
+
 
 public class StreamCreation {
 
@@ -21,7 +23,7 @@ public class StreamCreation {
 		
 		Arrays.stream(intArr).filter(x->x%2==0).forEach(System.out::println);
 		
-		List<String> names = Arrays.asList("Sanjive","Chandru","Sugumar","Hariharan");
+		List<String> names = Arrays.asList("Sanjives","Chandru","Sugumarrama","Hariharan");
 		System.out.println(names);
 		names = names.stream().map(x->x.toUpperCase()).collect(Collectors.toList());
 		
@@ -30,6 +32,12 @@ public class StreamCreation {
 		int sum = Arrays.stream(intArr).reduce(0,(x,y)->x+y);
 		
 		System.out.println(sum);
+		
+		List<String> sortedEmployee = names.stream().sorted(Comparator.reverseOrder())
+				.collect(Collectors.toList());
+		
+		
+		System.out.println(sortedEmployee);
 	}
 
 }
