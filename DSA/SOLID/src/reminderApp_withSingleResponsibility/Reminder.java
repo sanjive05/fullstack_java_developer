@@ -1,4 +1,4 @@
-package reminderApp_withoutSOLID;
+package reminderApp_withSingleResponsibility;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,7 +12,7 @@ public class Reminder {
 	private String note;
 	private LocalDateTime time;
 	
-	private List<Reminder> list = new ArrayList<>();
+	public static List<Reminder> list = new ArrayList<>();
 	
 	public void addReminder(Reminder reminder) {
 		list.add(reminder);
@@ -28,12 +28,6 @@ public class Reminder {
 		writter.close();
 	}
 	
-
-	
-	public List<Reminder> getList() {
-		return list;
-	}
-
 	public Reminder(int reminderId, String note, LocalDateTime time) {
 		super();
 		this.reminderId = reminderId;
