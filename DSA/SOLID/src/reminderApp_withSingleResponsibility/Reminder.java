@@ -12,19 +12,12 @@ public class Reminder {
 	private String note;
 	private LocalDateTime time;
 	
-	public static List<Reminder> list = new ArrayList<>();
-	
-	public void addReminder(Reminder reminder) {
-		list.add(reminder);
-	}
 	
 	public 	void saveReminders(String fileName) throws FileNotFoundException {
 		//D:\fullstack_java_developer\DSA\SOLID
 		File file = new File("D:\\fullstack_java_developer\\DSA\\SOLID\\"+fileName);
 		PrintStream writter = new PrintStream(file);
-		for(Reminder reminder :list) {
-			writter.println(reminder.toString());
-		}
+	
 		writter.close();
 	}
 	
